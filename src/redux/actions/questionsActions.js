@@ -118,7 +118,6 @@ export const sendVoteError = (err) => {
 }
 
 export const shareQuestion = (url, email) => (dispatch) => {
-    console.log('shared call', url, email);
     dispatch(sharedEmailRequest())
     axios
         .post(`https://private-anon-b149007a95-blissrecruitmentapi.apiary-mock.com/share?destination_email=${email}&content_url=${url}`)
